@@ -1,3 +1,4 @@
+from django.db import transaction
 from bootseq import default_registry
 from bootseq.runner import Runner
 from bootseq.filters import Filters
@@ -24,4 +25,9 @@ def run_bootseq(
         max_workers=max_workers,
     )
 
-    runner.run()
+    if dry_run:
+        runner.run()
+        return
+
+    with transaction.atomic():
+        runner.run()
