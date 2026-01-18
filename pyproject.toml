@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bootseq-dj"
+version = "1.0.0"
+description = "Django integration for bootseq"
+requires-python = ">=3.9"
+dependencies = [
+    "bootseq @ git+https://github.com/Ngahu/bootseq.git",
+    "Django>=4.2",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["bootseq_dj*"]
