@@ -11,7 +11,7 @@ def run_bootseq(
     skip=None,
     tags=None,
     dry_run=False,
-    max_workers=4,
+    max_workers=1,
     show_progress=True,
 ):
     filters = Filters(

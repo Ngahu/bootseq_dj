@@ -26,7 +26,7 @@ class Command(BaseCommand):
         )
         parser.add_argument("--tags", nargs="*", help="Only run tasks with these tags")
         parser.add_argument(
-            "--max-workers", type=int, default=4, help="Max parallel workers"
+            "--max-workers", type=int, default=1, help="Max parallel workers"
         )
         parser.add_argument(
             "--no-progress", action="store_true", help="Disable progress bar"
